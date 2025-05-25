@@ -6,7 +6,7 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/21 10:45:32 by athonda           #+#    #+#             */
-/*   Updated: 2025/05/21 10:52:06 by athonda          ###   ########.fr       */
+/*   Updated: 2025/05/24 21:08:37 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,19 @@
 class Bureaucrat
 {
 	public:
-		std::string	&getName() const;
+		Bureaucrat();
+		Bureaucrat(std::string const &name, int grade);
+		Bureaucrat(Bureaucrat const &other);
+		~Bureaucrat();
+
+		std::string	const	&getName() const;
 		int			getGrade() const;
 		void		incrementGrade();
 		void		decrementGrade();
 
 	private:
-		std::string	_name;
-		int			_grade;
+		std::string const	_name;
+		int					_grade;
+
+		Bureaucrat	&operator=(Bureaucrat const &other);
 };
