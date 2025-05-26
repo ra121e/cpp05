@@ -6,7 +6,7 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/24 21:02:41 by athonda           #+#    #+#             */
-/*   Updated: 2025/05/25 16:17:20 by athonda          ###   ########.fr       */
+/*   Updated: 2025/05/26 12:19:04 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@ int	main(void)
 	{
 		a.decrementGrade();
 	}
-	catch(char const *s)
+	catch(std::exception &e)
 	{
-		std::cout << s << std::endl;
+		std::cout << e.what() << std::endl;
 	}
 	return (0);
 }
