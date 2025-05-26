@@ -6,7 +6,7 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/24 16:39:12 by athonda           #+#    #+#             */
-/*   Updated: 2025/05/26 12:28:24 by athonda          ###   ########.fr       */
+/*   Updated: 2025/05/26 13:33:57 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,8 @@ void	Bureaucrat::decrementGrade()
 {
 	if (this->_grade == 150)
 	{
-		throw std::range_error("range error");
+		throw std::exception();
+//		throw std::range_error("range error");
 //		throw std::invalid_argument("150 is lowest");
 //		throw Bureaucrat::GradeTooLowException();
 	}
