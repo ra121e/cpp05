@@ -6,7 +6,7 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/24 21:02:41 by athonda           #+#    #+#             */
-/*   Updated: 2025/05/28 19:30:59 by athonda          ###   ########.fr       */
+/*   Updated: 2025/05/28 20:18:40 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,11 @@ int	main(void)
 	{
 		a.incrementGrade();
 	}
-	catch(Bureaucrat::ExceptionTooHighGrade &e)
+	catch(Bureaucrat::GradeTooHighException &e)
 	{
 		std::cout << e.what() << std::endl;
 	}
-	catch(Bureaucrat::ExceptionTooLowGrade &e)
+	catch(Bureaucrat::GradeTooLowException &e)
 	{
 		std::cout << e.what() << std::endl;
 	}

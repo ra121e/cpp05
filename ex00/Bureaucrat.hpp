@@ -6,7 +6,7 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/21 10:45:32 by athonda           #+#    #+#             */
-/*   Updated: 2025/05/28 19:41:21 by athonda          ###   ########.fr       */
+/*   Updated: 2025/05/28 20:17:02 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,13 +35,13 @@ class Bureaucrat
 		int					_grade;
 
 	public:
-		class ExceptionTooLowGrade:
+		class GradeTooLowException:
 			public std::exception
 		{
 			public:
 				virtual const char	*what() const throw();
 		};
-		class ExceptionTooHighGrade:
+		class GradeTooHighException:
 			public std::exception
 		{
 			public:

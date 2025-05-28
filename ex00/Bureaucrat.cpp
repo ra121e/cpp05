@@ -6,7 +6,7 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/24 16:39:12 by athonda           #+#    #+#             */
-/*   Updated: 2025/05/28 19:41:49 by athonda          ###   ########.fr       */
+/*   Updated: 2025/05/28 20:17:13 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ void	Bureaucrat::incrementGrade()
 {
 	if (this->_grade == 1)
 	{
-		throw Bureaucrat::ExceptionTooHighGrade();
+		throw Bureaucrat::GradeTooHighException();
 	}
 	else
 		this->_grade--;
@@ -54,18 +54,18 @@ void	Bureaucrat::decrementGrade()
 {
 	if (this->_grade == 150)
 	{
-		throw Bureaucrat::ExceptionTooLowGrade();
+		throw Bureaucrat::GradeTooLowException();
 	}
 	else
 		this->_grade++;
 }
 
-const char *Bureaucrat::ExceptionTooLowGrade::what() const throw()
+const char *Bureaucrat::GradeTooLowException::what() const throw()
 {
 	return ("Grade is too low.");
 }
 
-const char *Bureaucrat::ExceptionTooHighGrade::what() const throw()
+const char *Bureaucrat::GradeTooHighException::what() const throw()
 {
 	return ("Grade is too high.");
 }
