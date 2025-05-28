@@ -6,7 +6,7 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/21 10:45:32 by athonda           #+#    #+#             */
-/*   Updated: 2025/05/24 21:08:37 by athonda          ###   ########.fr       */
+/*   Updated: 2025/05/28 13:16:33 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,25 @@ class Bureaucrat
 		void		incrementGrade();
 		void		decrementGrade();
 
+//		GradeTooLowException();
+
 	private:
 		std::string const	_name;
 		int					_grade;
+
+	public:
+		class BureaucratTooLowGrade:
+			public std::exception
+		{
+			public:
+				virtual const char	*what() const throw();
+		};
+		class BureaucratTooHighGrade:
+			public std::exception
+		{
+			public:
+				virtual const char*	what() const throw();
+		};
 
 		Bureaucrat	&operator=(Bureaucrat const &other);
 };
