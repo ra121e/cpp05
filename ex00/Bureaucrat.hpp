@@ -6,7 +6,7 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/21 10:45:32 by athonda           #+#    #+#             */
-/*   Updated: 2025/05/28 15:02:51 by athonda          ###   ########.fr       */
+/*   Updated: 2025/05/28 19:41:21 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ class Bureaucrat
 		int			getGrade() const;
 		void		incrementGrade();
 		void		decrementGrade();
+
 
 //		GradeTooLowException();
 
@@ -49,3 +50,5 @@ class Bureaucrat
 
 		Bureaucrat	&operator=(Bureaucrat const &other);
 };
+
+std::ostream	&operator<<(std::ostream &os, const Bureaucrat &b);
