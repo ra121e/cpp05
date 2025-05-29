@@ -6,11 +6,12 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 15:39:21 by athonda           #+#    #+#             */
-/*   Updated: 2025/05/29 09:21:08 by athonda          ###   ########.fr       */
+/*   Updated: 2025/05/29 17:40:26 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Form.hpp"
+#include "Bureaucrat.hpp"
 
 Form::Form() :
 	_name("Shorui"),
@@ -48,6 +49,11 @@ std::string const	&Form::getName() const
 	return (this->_name);
 }
 
+bool	Form::getSigned()
+{
+	return (this->_signed);
+}
+
 int	Form::getGradeToSign() const
 {
 	return (this->_gradeToSign);
@@ -56,6 +62,18 @@ int	Form::getGradeToSign() const
 int	Form::getGradeToExecute() const
 {
 	return (this->_gradeToExecute);
+}
+
+void	Form::beSigned(Bureaucrat b)
+{
+	if (this->getGradeToSign() <= b.getGrade())
+	{
+		throw (Form::GradeTooLowException());
+	}
+	else
+	{
+		this->_signed = true;
+	}
 }
 
 const char	*Form::GradeTooLowException::what() const throw()

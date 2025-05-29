@@ -6,12 +6,14 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 15:22:33 by athonda           #+#    #+#             */
-/*   Updated: 2025/05/29 09:19:26 by athonda          ###   ########.fr       */
+/*   Updated: 2025/05/29 17:09:40 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 #include <string>
+
+class Bureaucrat;
 
 class Form
 {
@@ -21,8 +23,10 @@ class Form
 		Form(Form const &other);
 		~Form();
 		std::string const	&getName() const;
+		bool	getSigned();
 		int	getGradeToSign() const;
 		int	getGradeToExecute() const;
+		void	beSigned(Bureaucrat b);
 
 		class GradeTooLowException:
 			public std::exception
