@@ -6,11 +6,11 @@
 #    By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/28 15:21:08 by athonda           #+#    #+#              #
-#    Updated: 2025/05/28 15:33:33 by athonda          ###   ########.fr        #
+#    Updated: 2025/05/29 09:20:22 by athonda          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Bureaucrat
+NAME = Form
 
 SRC_DIR = src
 SRC_F	=	main.cpp \

@@ -6,7 +6,7 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 15:22:33 by athonda           #+#    #+#             */
-/*   Updated: 2025/05/28 15:39:06 by athonda          ###   ########.fr       */
+/*   Updated: 2025/05/29 09:19:26 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,15 +17,33 @@ class Form
 {
 	public:
 		Form();
-		Form(std::string name, int gradtosignm int gradetoexecute);
+		Form(std::string name, int gradeToSign, int gradeToExecute);
+		Form(Form const &other);
 		~Form();
-		int	getGrade();
+		std::string const	&getName() const;
+		int	getGradeToSign() const;
+		int	getGradeToExecute() const;
+
+		class GradeTooLowException:
+			public std::exception
+		{
+			public:
+				virtual const char	*what() const throw();
+		};
+		class GradeTooHighException:
+			public std::exception
+		{
+			public:
+				virtual const char	*what() const throw();
+		};
 
 	private:
 		std::string const	_name;
 		bool				_signed;
-		int const			_gradetosign;
-		int const			_gradetoexecute;
+		int const			_gradeToSign;
+		int const			_gradeToExecute;
 
 		Form	&operator=(const Form &other);
 };
+
+std::ostream	&operator<<(std::ostream &os, Form const &f);
