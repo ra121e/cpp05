@@ -6,13 +6,14 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/30 12:35:10 by athonda           #+#    #+#             */
-/*   Updated: 2025/05/30 12:35:45 by athonda          ###   ########.fr       */
+/*   Updated: 2025/05/30 16:41:11 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 #include <string>
 #include <iostream>
+#include "Form.hpp"
 
 class Bureaucrat
 {
@@ -27,12 +28,12 @@ class Bureaucrat
 		void		incrementGrade();
 		void		decrementGrade();
 
-
-//		GradeTooLowException();
+		void		signForm(Form &form);
 
 	private:
 		std::string const	_name;
 		int					_grade;
+		Bureaucrat	&operator=(Bureaucrat const &other);
 
 	public:
 		class GradeTooLowException:
@@ -47,8 +48,6 @@ class Bureaucrat
 			public:
 				virtual const char*	what() const throw();
 		};
-
-		Bureaucrat	&operator=(Bureaucrat const &other);
 };
 
 std::ostream	&operator<<(std::ostream &os, const Bureaucrat &b);
