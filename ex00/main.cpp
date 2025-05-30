@@ -6,7 +6,7 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/24 21:02:41 by athonda           #+#    #+#             */
-/*   Updated: 2025/05/30 09:42:17 by athonda          ###   ########.fr       */
+/*   Updated: 2025/05/30 10:59:43 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ int	main(void)
 	try
 	{
 		Bureaucrat	a("Kanryo", 1);
-		std::cout << a;
+		std::cout << a << std::endl;
 		a.incrementGrade();
 	}
 	catch(Bureaucrat::GradeTooHighException &e)
@@ -66,7 +66,7 @@ int	main(void)
 	try
 	{
 		Bureaucrat	a("Yakunin", 150);
-		std::cout << a;
+		std::cout << a << std::endl;
 		a.decrementGrade();
 	}
 	catch(Bureaucrat::GradeTooHighException &e)
