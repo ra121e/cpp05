@@ -6,7 +6,7 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/29 08:25:03 by athonda           #+#    #+#             */
-/*   Updated: 2025/05/30 16:53:09 by athonda          ###   ########.fr       */
+/*   Updated: 2025/05/31 11:06:05 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,6 @@ int	main(void)
 	printBanner("Form test");
 	Form	a("Shinseisho", 20, 100);
 	std::cout << a << std::endl;
-	std::cout << a.getSigned() << std::endl;
-	std::cout << a.getGradeToSign() << std::endl;
-	std::cout << a.getGradeToExecute() << std::endl;
 
 	printBanner("Bureaucrat Form separate");
 	Bureaucrat	bu("Kanri", 5);
@@ -34,20 +31,17 @@ int	main(void)
 	a.beSigned(bu);
 	std::cout << a.getSigned() << std::endl;
 
-	printBanner("Bureaucrat signs Form");
+	printBanner("Bureaucrat signs Form (approval)");
 	Bureaucrat	bu2("Kangan", 4);
 	std::cout << bu2 << std::endl;
-	Form	f("visa", 2, 2);
+	Form	f("visa application", 10, 20);
 	std::cout << f << std::endl;
-
 	bu2.signForm(f);
+	std::cout << f << std::endl;
 
 	printBanner("Form only");
 	Form	b;
 	std::cout << b << std::endl;
-	std::cout << b.getSigned() << std::endl;
-	std::cout << b.getGradeToSign() << std::endl;
-	std::cout << b.getGradeToExecute() << std::endl;
 
 	try
 	{

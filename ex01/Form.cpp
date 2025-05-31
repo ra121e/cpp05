@@ -6,7 +6,7 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 15:39:21 by athonda           #+#    #+#             */
-/*   Updated: 2025/05/29 17:40:26 by athonda          ###   ########.fr       */
+/*   Updated: 2025/05/31 10:50:27 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include "Bureaucrat.hpp"
 
 Form::Form() :
-	_name("Shorui"),
+	_name("General Application"),
 	_signed(false),
 	_gradeToSign(1),
 	_gradeToExecute(1)
@@ -49,7 +49,7 @@ std::string const	&Form::getName() const
 	return (this->_name);
 }
 
-bool	Form::getSigned()
+bool	Form::getSigned() const
 {
 	return (this->_signed);
 }
@@ -88,7 +88,7 @@ const char	*Form::GradeTooHighException::what() const throw()
 
 std::ostream	&operator<<(std::ostream &os, Form const &f)
 {
-	os << f.getName();
+	os << f.getName() << ", Grade to sign " << f.getGradeToSign() << ", Grade to Execute " << f.getGradeToExecute() << " :Signed[Yes:1 No:0] [" << f.getSigned() << "].";
 
 	return (os);
 }

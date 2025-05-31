@@ -6,7 +6,7 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 15:22:33 by athonda           #+#    #+#             */
-/*   Updated: 2025/05/29 17:09:40 by athonda          ###   ########.fr       */
+/*   Updated: 2025/05/31 10:48:46 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class Form
 		Form(Form const &other);
 		~Form();
 		std::string const	&getName() const;
-		bool	getSigned();
+		bool	getSigned() const;
 		int	getGradeToSign() const;
 		int	getGradeToExecute() const;
 		void	beSigned(Bureaucrat b);
