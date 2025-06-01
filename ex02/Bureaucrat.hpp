@@ -6,7 +6,7 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/01 13:27:54 by athonda           #+#    #+#             */
-/*   Updated: 2025/06/01 18:51:08 by athonda          ###   ########.fr       */
+/*   Updated: 2025/06/01 23:22:47 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ class Bureaucrat
 		void		decrementGrade();
 
 		void		signForm(AForm &form);
+		void		executeForm(AForm &form);
 
 	private:
 		std::string const	_name;

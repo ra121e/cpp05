@@ -6,7 +6,7 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/01 11:23:03 by athonda           #+#    #+#             */
-/*   Updated: 2025/06/01 21:14:49 by athonda          ###   ########.fr       */
+/*   Updated: 2025/06/02 00:03:26 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ ShrubberyCreationForm::~ShrubberyCreationForm()
 
 void	ShrubberyCreationForm::execute(Bureaucrat const &executor) const
 {
-	std::cout << executor << std::endl;
+	AForm::CheckBeforeExecute(executor);
 	std::string fileName = this->getTarget() + "_shrubbery";
 	std::ofstream ofs(fileName.c_str());
 	ofs << "        ,.,.,\n";

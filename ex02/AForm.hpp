@@ -6,7 +6,7 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/01 10:34:43 by athonda           #+#    #+#             */
-/*   Updated: 2025/06/01 20:35:27 by athonda          ###   ########.fr       */
+/*   Updated: 2025/06/01 23:11:42 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ class AForm
 		void	beSigned(Bureaucrat b);
 
 		virtual void	execute(Bureaucrat const &executor) const = 0;
+		void	CheckBeforeExecute(Bureaucrat const &executor) const;
 
 		class GradeTooLowException:
 			public std::exception
@@ -40,6 +41,12 @@ class AForm
 				virtual const char	*what() const throw();
 		};
 		class GradeTooHighException:
+			public std::exception
+		{
+			public:
+				virtual const char	*what() const throw();
+		};
+		class UnsignedException:
 			public std::exception
 		{
 			public:
