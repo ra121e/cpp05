@@ -6,14 +6,15 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/01 13:27:54 by athonda           #+#    #+#             */
-/*   Updated: 2025/06/01 13:30:55 by athonda          ###   ########.fr       */
+/*   Updated: 2025/06/01 18:51:08 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 #include <string>
 #include <iostream>
-#include "AForm.hpp"
+
+class AForm;
 
 class Bureaucrat
 {

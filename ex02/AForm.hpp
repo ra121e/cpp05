@@ -6,12 +6,13 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/01 10:34:43 by athonda           #+#    #+#             */
-/*   Updated: 2025/06/01 13:34:35 by athonda          ###   ########.fr       */
+/*   Updated: 2025/06/01 14:47:46 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 #include <string>
+#include <iostream>
 
 class Bureaucrat;
 
@@ -21,12 +22,15 @@ class AForm
 		AForm();
 		AForm(std::string name, int gradeToSign, int gradeToExecute);
 		AForm(AForm const &other);
-		~AForm();
+		virtual ~AForm();
+
 		std::string const	&getName() const;
 		bool	getSigned() const;
 		int	getGradeToSign() const;
 		int	getGradeToExecute() const;
 		void	beSigned(Bureaucrat b);
+
+		virtual void	execute(Bureaucrat const &executor) const = 0;
 
 		class GradeTooLowException:
 			public std::exception
