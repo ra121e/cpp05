@@ -6,7 +6,7 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/01 10:37:26 by athonda           #+#    #+#             */
-/*   Updated: 2025/06/01 11:52:25 by athonda          ###   ########.fr       */
+/*   Updated: 2025/06/01 20:34:46 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,16 @@ AForm::AForm() :
 	_name("General Application"),
 	_signed(false),
 	_gradeToSign(1),
-	_gradeToExecute(1)
+	_gradeToExecute(1),
+	_target("General Target")
 {}
 
-AForm::AForm(std::string name, int gradeToSign, int gradeToExecute):
+AForm::AForm(std::string name, int gradeToSign, int gradeToExecute, std::string const &target):
 	_name(name),
 	_signed(false),
 	_gradeToSign(gradeToSign),
-	_gradeToExecute(gradeToExecute)
+	_gradeToExecute(gradeToExecute),
+	_target(target)
 {
 	if (_gradeToSign < 1 || _gradeToExecute < 1)
 		throw GradeTooHighException();
@@ -36,7 +38,8 @@ AForm::AForm(AForm const &other):
 	_name(other._name),
 	_signed(other._signed),
 	_gradeToSign(other._gradeToSign),
-	_gradeToExecute(other._gradeToExecute)
+	_gradeToExecute(other._gradeToExecute),
+	_target(other._target)
 {
 
 }
@@ -47,6 +50,11 @@ AForm::~AForm()
 std::string const	&AForm::getName() const
 {
 	return (this->_name);
+}
+
+std::string const	&AForm::getTarget() const
+{
+	return (this->_target);
 }
 
 bool	AForm::getSigned() const

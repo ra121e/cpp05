@@ -6,7 +6,7 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/01 11:23:03 by athonda           #+#    #+#             */
-/*   Updated: 2025/06/01 14:51:20 by athonda          ###   ########.fr       */
+/*   Updated: 2025/06/01 20:44:35 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,19 @@
 #include "Bureaucrat.hpp"
 
 ShrubberyCreationForm::ShrubberyCreationForm() :
-	AForm("ShrubberyCreationForm", 145, 137)
+	AForm("ShrubberyCreationForm", 145, 137, "Default Target")
 {
 
 }
 
+ShrubberyCreationForm::ShrubberyCreationForm(std::string const &target) :
+	AForm("ShrubberyCreationForm", 145, 137, target)
+{
+
+}
 
 ShrubberyCreationForm::ShrubberyCreationForm(ShrubberyCreationForm const &other) :
-	AForm(other.getName(), other.getGradeToSign(), other.getGradeToExecute())
+	AForm(other.getName(), other.getGradeToSign(), other.getGradeToExecute(), other.getTarget())
 {
 
 }

@@ -6,11 +6,12 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/01 13:31:21 by athonda           #+#    #+#             */
-/*   Updated: 2025/06/01 13:32:32 by athonda          ###   ########.fr       */
+/*   Updated: 2025/06/01 20:40:14 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+#include "AForm.hpp"
 
 Bureaucrat::Bureaucrat() :
 	_name("nonName"),

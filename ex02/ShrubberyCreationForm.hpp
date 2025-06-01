@@ -6,7 +6,7 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/01 08:49:10 by athonda           #+#    #+#             */
-/*   Updated: 2025/06/01 18:50:02 by athonda          ###   ########.fr       */
+/*   Updated: 2025/06/01 20:41:30 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ class ShrubberyCreationForm :
 {
 	public:
 		ShrubberyCreationForm();
+		ShrubberyCreationForm(std::string const &target);
 		ShrubberyCreationForm(ShrubberyCreationForm const &other);
 		~ShrubberyCreationForm();
 

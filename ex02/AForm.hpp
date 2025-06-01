@@ -6,7 +6,7 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/01 10:34:43 by athonda           #+#    #+#             */
-/*   Updated: 2025/06/01 14:47:46 by athonda          ###   ########.fr       */
+/*   Updated: 2025/06/01 20:35:27 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,12 @@ class AForm
 {
 	public:
 		AForm();
-		AForm(std::string name, int gradeToSign, int gradeToExecute);
+		AForm(std::string name, int gradeToSign, int gradeToExecute, std::string const &target);
 		AForm(AForm const &other);
 		virtual ~AForm();
 
 		std::string const	&getName() const;
+		std::string const	&getTarget() const;
 		bool	getSigned() const;
 		int	getGradeToSign() const;
 		int	getGradeToExecute() const;
@@ -50,6 +51,7 @@ class AForm
 		bool				_signed;
 		int const			_gradeToSign;
 		int const			_gradeToExecute;
+		std::string const	_target;
 
 		AForm	&operator=(const AForm &other);
 };
