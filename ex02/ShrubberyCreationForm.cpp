@@ -6,10 +6,11 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/01 11:23:03 by athonda           #+#    #+#             */
-/*   Updated: 2025/06/01 20:44:35 by athonda          ###   ########.fr       */
+/*   Updated: 2025/06/01 21:14:49 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <fstream>
 #include "ShrubberyCreationForm.hpp"
 #include "Bureaucrat.hpp"
 
@@ -38,5 +39,13 @@ ShrubberyCreationForm::~ShrubberyCreationForm()
 
 void	ShrubberyCreationForm::execute(Bureaucrat const &executor) const
 {
-	std::cout << executor.getName() << std::endl;
+	std::cout << executor << std::endl;
+	std::string fileName = this->getTarget() + "_shrubbery";
+	std::ofstream ofs(fileName.c_str());
+	ofs << "        ,.,.,\n";
+	ofs << "     ,.,;:;：:､、,,:.：,..\n";
+	ofs << " ,,;:;:；｡;,;:：:;:：::;,..\n";
+	ofs << ",.,:,,:;;:;:：;,.,｡,.,:,;:;:：;,.\n";
+	ofs << "     ''''yi''''''yi''\n";
+	ofs << "     ,..ili .,,,.il\n";
 }
