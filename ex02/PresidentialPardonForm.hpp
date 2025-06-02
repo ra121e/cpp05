@@ -6,7 +6,7 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 09:14:57 by athonda           #+#    #+#             */
-/*   Updated: 2025/06/02 09:26:24 by athonda          ###   ########.fr       */
+/*   Updated: 2025/06/02 19:24:52 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class PresidentialPardonForm:
 		PresidentialPardonForm(PresidentialPardonForm const &other);
 		~PresidentialPardonForm();
 
-		void	executor(Bureaucrat const &executor) const;
+		void	execute(Bureaucrat const &executor) const;
 	private:
 		PresidentialPardonForm	&operator=(PresidentialPardonForm const &other);
 };

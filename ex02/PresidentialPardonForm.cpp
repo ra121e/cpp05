@@ -6,7 +6,7 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 09:18:31 by athonda           #+#    #+#             */
-/*   Updated: 2025/06/02 10:44:58 by athonda          ###   ########.fr       */
+/*   Updated: 2025/06/02 19:26:08 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ PresidentialPardonForm::PresidentialPardonForm(PresidentialPardonForm const &oth
 PresidentialPardonForm::~PresidentialPardonForm()
 {}
 
-void	PresidentialPardonForm::executor(Bureaucrat const &executor) const
+void	PresidentialPardonForm::execute(Bureaucrat const &executor) const
 {
 	AForm::CheckBeforeExecute(executor);
 	std::cout << this->getTarget() << " has been pardoned by Zaphod Beeblebrox." << std::endl;
