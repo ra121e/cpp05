@@ -6,7 +6,7 @@
 #    By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/02 12:20:04 by athonda           #+#    #+#              #
-#    Updated: 2025/06/02 12:20:36 by athonda          ###   ########.fr        #
+#    Updated: 2025/06/02 19:10:34 by athonda          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ SRC_F	=	main.cpp \
 			ShrubberyCreationForm.cpp \
 			RobotomyRequestForm.cpp \
 			PresidentialPardonForm.cpp \
-			intern.cpp
+			Intern.cpp
 
 SRC = $(SRC_F:%.c=%.c)
 

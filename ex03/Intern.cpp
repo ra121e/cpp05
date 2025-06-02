@@ -6,7 +6,7 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 12:21:26 by athonda           #+#    #+#             */
-/*   Updated: 2025/06/02 18:57:24 by athonda          ###   ########.fr       */
+/*   Updated: 2025/06/02 19:29:41 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,15 @@ Intern::Intern()
 {}
 
 Intern::Intern(Intern const &other)
-{}
+{
+	(void)other;
+}
 
 Intern	&Intern::operator=(Intern const &other)
-{}
+{
+	(void)other;
+	return (*this);
+}
 
 Intern::~Intern()
 {}
@@ -34,7 +39,7 @@ struct Intern::s_formTable	Intern::formTable[3] =
 	{"Shrubbery", &Intern::makeShrubberyCreationForm},
 	{"Robotomy", &Intern::makeRobotomyRequestForm},
 	{"Presidential", &Intern::makePresidentialPardonForm}
-}
+};
 
 AForm	*Intern::makeForm(std::string const &form, std::string const &target)
 {
@@ -50,11 +55,13 @@ AForm	*Intern::makeForm(std::string const &form, std::string const &target)
 	switch(index)
 	{
 		case 0:
-			(this->*(formTable[0].func))();
+			return ((this->*(formTable[0].func))(target));
 		case 1:
-			(this->*(formTable[1].func))();
+			return ((this->*(formTable[1].func))(target));
 		case 2:
-			(this->*(formTable[2].func))();
+			return ((this->*(formTable[2].func))(target));
+		default:
+			return (NULL);
 	}
 }
 
