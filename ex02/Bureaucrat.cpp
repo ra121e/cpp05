@@ -6,7 +6,7 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/01 13:31:21 by athonda           #+#    #+#             */
-/*   Updated: 2025/06/01 23:54:33 by athonda          ###   ########.fr       */
+/*   Updated: 2025/06/02 08:18:47 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,7 +88,7 @@ void	Bureaucrat::executeForm(AForm &form)
 	try
 	{
 		form.execute(*this);
-		std::cout << this->_name << " execute " << form.getName() << std::endl;
+		std::cout << this->_name << " executed " << form.getName() << std::endl;
 	}
 	catch(AForm::UnsignedException &e)
 	{
