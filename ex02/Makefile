@@ -6,7 +6,7 @@
 #    By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/31 11:27:08 by athonda           #+#    #+#              #
-#    Updated: 2025/06/01 13:45:09 by athonda          ###   ########.fr        #
+#    Updated: 2025/06/02 09:06:45 by athonda          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,8 @@ SRC_DIR = src
 SRC_F	=	main.cpp \
 			Bureaucrat.cpp \
 			AForm.cpp \
-			ShrubberyCreationForm.cpp
+			ShrubberyCreationForm.cpp \
+			RobotomyRequestForm.cpp
 
 SRC = $(SRC_F:%.c=%.c)
 
