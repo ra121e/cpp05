@@ -6,7 +6,7 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/01 13:20:37 by athonda           #+#    #+#             */
-/*   Updated: 2025/06/01 23:57:12 by athonda          ###   ########.fr       */
+/*   Updated: 2025/06/02 08:32:46 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ int	main(void)
 	std::cout << f << std::endl;
 	b.executeForm(f);
 	a.signForm(f);
+	std::cout << f << std::endl;
 	b.executeForm(f);
 	a.executeForm(f);
 	return (0);

@@ -6,7 +6,7 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/01 10:37:26 by athonda           #+#    #+#             */
-/*   Updated: 2025/06/01 23:57:35 by athonda          ###   ########.fr       */
+/*   Updated: 2025/06/02 08:32:01 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,7 +86,7 @@ void	AForm::beSigned(Bureaucrat b)
 
 void	AForm::CheckBeforeExecute(Bureaucrat const &executor) const
 {
-	if (this->getSigned() == 0)
+	if (this->getSigned() == false)
 	{
 		throw (AForm::UnsignedException());
 	}
