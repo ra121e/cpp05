@@ -6,7 +6,7 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 12:21:26 by athonda           #+#    #+#             */
-/*   Updated: 2025/06/02 19:29:41 by athonda          ###   ########.fr       */
+/*   Updated: 2025/06/03 12:38:09 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,26 +43,18 @@ struct Intern::s_formTable	Intern::formTable[3] =
 
 AForm	*Intern::makeForm(std::string const &form, std::string const &target)
 {
-	int	index = 4;
+	AForm	*aform = NULL;
 	for (int i = 0; i < 3; ++i)
 	{
 		if (formTable[i].formName == form)
 		{
-			index = i;
-			break ;
+			aform = (this->*formTable[i].func)(target);
+			std::cout << "Intern creats " << aform->getName() << std::endl;
+			return (aform) ;
 		}
 	}
-	switch(index)
-	{
-		case 0:
-			return ((this->*(formTable[0].func))(target));
-		case 1:
-			return ((this->*(formTable[1].func))(target));
-		case 2:
-			return ((this->*(formTable[2].func))(target));
-		default:
-			return (NULL);
-	}
+	std::cerr << "Error: there is no " << form << ". [Shuruberry][Robotomy][Presidential]" << std::endl;
+	return (NULL);
 }
 
 AForm	*Intern::makeShrubberyCreationForm(std::string const &target)
