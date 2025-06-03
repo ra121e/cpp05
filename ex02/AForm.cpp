@@ -6,7 +6,7 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/01 10:37:26 by athonda           #+#    #+#             */
-/*   Updated: 2025/06/02 08:32:01 by athonda          ###   ########.fr       */
+/*   Updated: 2025/06/03 16:31:47 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -113,7 +113,7 @@ const char	*AForm::UnsignedException::what() const throw()
 
 std::ostream	&operator<<(std::ostream &os, AForm const &f)
 {
-	os << f.getName() << ", Grade to sign " << f.getGradeToSign() << ", Grade to Execute " << f.getGradeToExecute() << " :Signed[Yes:1 No:0] [" << f.getSigned() << "].";
+	os << f.getName() << ", Grade to sign " << f.getGradeToSign() << ", Grade to Execute " << f.getGradeToExecute() << ", Sign " << f.getSigned() << " [Yes:1 No:0]";
 
 	return (os);
 }
