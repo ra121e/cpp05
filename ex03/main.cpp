@@ -6,7 +6,7 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 19:36:03 by athonda           #+#    #+#             */
-/*   Updated: 2025/06/04 14:46:13 by athonda          ###   ########.fr       */
+/*   Updated: 2025/06/04 17:19:28 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ int	main(void)
 	}
 	catch(std::exception &e)
 	{
-		std::cout << e.what() << std::endl;
+		std::cout << "Unexpected exception will be caught in main(): " << e.what() << std::endl;
 	}
 
 	return (0);
