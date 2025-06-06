@@ -6,13 +6,13 @@
 #    By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/02 12:20:04 by athonda           #+#    #+#              #
-#    Updated: 2025/06/02 19:10:34 by athonda          ###   ########.fr        #
+#    Updated: 2025/06/06 09:42:09 by athonda          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = Intern
 
-SRC_DIR = src
+SRC_DIR =	.
 SRC_F	=	main.cpp \
 			Bureaucrat.cpp \
 			AForm.cpp \
@@ -21,24 +21,24 @@ SRC_F	=	main.cpp \
 			PresidentialPardonForm.cpp \
 			Intern.cpp
 
-SRC = $(SRC_F:%.c=%.c)
+SRC = $(SRC_F:%.c=$(SRC_DIR)/%.c)
 
 OBJ_DIR = obj
 OBJ =	$(patsubst %.cpp,$(OBJ_DIR)/%.o,$(SRC_F))
 
-INC_DIR = inc
-DEP = $(wildcard $(patsubst %.cpp,%.hpp,$(SRC_F)))
+INC_DIR =	.
+DEP = $(wildcard $(patsubst %.cpp,$(INC_DIR)/%.hpp,$(SRC_F)))
 
-IFLAGS = -Iinc
+IFLAGS = -I$(INC_DIR)
 CFLAGS = -g -std=c++98 -Wall -Werror -Wextra
 CC = c++
 
 $(NAME) : $(OBJ)
 	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 
-$(OBJ_DIR)/%.o: %.cpp $(DEP)
+$(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp $(DEP)
 	@mkdir -p $(OBJ_DIR)
-	$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) $(IFLAGS) -c $< -o $@
 
 .PHONY: all clean fclean re
 
