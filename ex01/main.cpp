@@ -6,7 +6,7 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/29 08:25:03 by athonda           #+#    #+#             */
-/*   Updated: 2025/05/31 11:06:05 by athonda          ###   ########.fr       */
+/*   Updated: 2025/06/06 16:31:55 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,14 @@ int	main(void)
 	std::cout << f << std::endl;
 	bu2.signForm(f);
 	std::cout << f << std::endl;
+
+	printBanner("edge case: Bureaucrat same grade to Form");
+	Bureaucrat	bu3("Miyadukae", 10);
+	std::cout << bu3 << std::endl;
+	Form	g("birth notification", 10, 100);
+	std::cout << g << std::endl;
+	bu3.signForm(g);
+	std::cout << g << std::endl;
 
 	printBanner("Form only");
 	Form	b;

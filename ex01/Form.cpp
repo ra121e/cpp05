@@ -6,7 +6,7 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 15:39:21 by athonda           #+#    #+#             */
-/*   Updated: 2025/05/31 10:50:27 by athonda          ###   ########.fr       */
+/*   Updated: 2025/06/06 16:25:29 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ int	Form::getGradeToExecute() const
 
 void	Form::beSigned(Bureaucrat b)
 {
-	if (this->getGradeToSign() <= b.getGrade())
+	if (this->getGradeToSign() < b.getGrade())
 	{
 		throw (Form::GradeTooLowException());
 	}
