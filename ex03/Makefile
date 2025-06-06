@@ -6,7 +6,7 @@
 #    By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/02 12:20:04 by athonda           #+#    #+#              #
-#    Updated: 2025/06/06 09:42:09 by athonda          ###   ########.fr        #
+#    Updated: 2025/06/06 12:34:03 by athonda          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,3 +51,7 @@ fclean: clean
 	rm $(NAME)
 
 re: fclean all
+
+norm:
+	nm -u $(NAME)
+	grep -n -e "printf" -e "alloc" -e "free" -e "main" $(SRC)
